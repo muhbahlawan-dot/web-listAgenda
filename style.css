@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+    font-family:  "Roboto", sans-serif;;
+}
+
+.container{
+    background-color: black;
+    padding: 2rem;
+    border-radius: 5px;
+    text-align: center;
+    width: 400px;
+}
+
+h2{
+    font-size: 2rem;
+    color: greenyellow;
+}
+
+.input-area{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+input[type='text']{
+    padding: 10px;
+    flex: 1;
+    /* border-radius: 5px; */
+}
+input[type='text']:focus{
+    outline: 2px solid greenyellow;
+}
+.add-button{
+    background-color: greenyellow;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: ease-in 0.2s;
+}
+
+.add-button:hover{
+    background-color:rgb(44, 44, 44);
+    color: greenyellow;
+    
+}
+ul{
+    list-style: none;
+    padding: 0;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+li{
+    color: greenyellow;
+    padding: 1rem;
+    display: flex;
+    gap: 20px;
+    text-align: left;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+.completed-task{
+    text-decoration: line-through;
+    opacity: 0.65;
+}
+.task-actions{
+    display: flex;
+    gap: 0.5rem;
+}
+.complete-button{
+    background-color: greenyellow;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: ease-in 0.2s;
+}
+.complete-button:hover{
+    background-color: rgb(44, 44, 44);
+    color: greenyellow;
+}
+.delete-button{
+    background-color: greenyellow;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: ease-in 0.2s;
+}
+
+.delete-button:hover{
+    background-color: rgb(44, 44, 44);
+    color: greenyellow;
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        padding: 1rem;
+    }
+}
