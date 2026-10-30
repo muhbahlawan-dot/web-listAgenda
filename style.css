@@ -1,114 +1,163 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+    box-sizing: border-box;
+}
 
-body{
-    background-color: white;
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 5rem 1.5rem;
     display: flex;
     justify-content: center;
-    padding: 5rem;
-    font-family:  "Roboto", sans-serif;;
+    align-items: flex-start;
+    background: linear-gradient(135deg, #edf6fb 0%, #eaf7f3 100%);
+    color: #244554;
+    font-family: "Roboto", sans-serif;
 }
 
-.container{
-    background-color: black;
+.container {
+    width: min(100%, 500px);
     padding: 2rem;
-    border-radius: 5px;
+    border: 1px solid #dcebee;
+    border-radius: 18px;
+    background-color: #ffffff;
+    box-shadow: 0 16px 40px rgba(34, 91, 109, 0.12);
     text-align: center;
-    width: 400px;
 }
 
-h2{
+h2 {
+    margin: 0 0 1.75rem;
+    color: #17627b;
     font-size: 2rem;
-    color: greenyellow;
 }
 
-.input-area{
+.input-area {
     display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: 4rem;
-}
-input[type='text']{
-    padding: 10px;
-    flex: 1;
-    /* border-radius: 5px; */
-}
-input[type='text']:focus{
-    outline: 2px solid greenyellow;
-}
-.add-button{
-    background-color: greenyellow;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: ease-in 0.2s;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
 }
 
-.add-button:hover{
-    background-color:rgb(44, 44, 44);
-    color: greenyellow;
-    
+input[type='text'] {
+    min-width: 0;
+    flex: 1;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid #c9dfe4;
+    border-radius: 8px;
+    background-color: #fbfefe;
+    color: #244554;
+    font: inherit;
 }
-ul{
-    list-style: none;
-    padding: 0;
-    gap: 2rem;
+
+input[type='text']::placeholder {
+    color: #78919a;
+}
+
+input[type='text']:focus {
+    outline: 3px solid rgba(31, 145, 153, 0.2);
+    border-color: #238d98;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:focus-visible {
+    outline: 3px solid #6cc4b0;
+    outline-offset: 2px;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+.add-button {
+    padding: 0.75rem 1.25rem;
+    background-color: #187c91;
+    color: #ffffff;
+}
+
+.add-button:hover {
+    background-color: #12677b;
+}
+
+ul {
     display: flex;
     flex-direction: column;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
-li{
-    color: greenyellow;
-    padding: 1rem;
+
+li {
     display: flex;
-    gap: 20px;
-    text-align: left;
-    border-radius: 5px;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.85rem;
+    border: 1px solid #e0ecee;
+    border-radius: 10px;
+    background-color: #f5fafb;
+    color: #315564;
+    text-align: left;
 }
-.completed-task{
+
+.completed-task {
+    color: #648179;
     text-decoration: line-through;
-    opacity: 0.65;
+    opacity: 0.75;
 }
-.task-actions{
+
+.task-actions {
     display: flex;
+    flex-shrink: 0;
     gap: 0.5rem;
 }
-.complete-button{
-    background-color: greenyellow;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: ease-in 0.2s;
-}
-.complete-button:hover{
-    background-color: rgb(44, 44, 44);
-    color: greenyellow;
-}
-.delete-button{
-    background-color: greenyellow;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: ease-in 0.2s;
+
+.complete-button,
+.delete-button {
+    padding: 0.55rem 0.75rem;
 }
 
-.delete-button:hover{
-    background-color: rgb(44, 44, 44);
-    color: greenyellow;
+.complete-button {
+    background-color: #e3f4ed;
+    color: #176b4a;
 }
 
-@media screen and (max-width: 768px) {
-    body{
-        padding: 1rem;
+.complete-button:hover {
+    background-color: #cfeade;
+}
+
+.delete-button {
+    background-color: #fff0ed;
+    color: #a64c40;
+}
+
+.delete-button:hover {
+    background-color: #ffe0db;
+}
+
+@media screen and (max-width: 520px) {
+    body {
+        padding: 2rem 1rem;
+    }
+
+    .container {
+        padding: 1.5rem 1rem;
+    }
+
+    li {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .task-actions {
+        align-self: flex-end;
     }
 }
